@@ -7,13 +7,13 @@ const timelineData = [
     id: 1,
     title: "Full-Stack Web Developer",
     company: "Freelance & Independent Practice",
-    period: "2022 - Present",
+    period: "2025 - Present",
     description: "Designing and developing production full-stack web applications with React, Django REST Framework, and PostgreSQL. Engineering real-time features, secure authentication (JWT/OTP), relational database schemas, and AI-assisted workflows for clients.",
     icon: <Briefcase className="w-5 h-5" />
   },
   {
     id: 2,
-    title: "Frontend & UI/UX Developer",
+    title: "UI/UX Developer",
     company: "Creative Design & Multimedia Institute",
     period: "2021 - 2024",
     description: "Built responsive, component-driven interfaces using React and modern CSS/Tailwind. Collaborated on cross-device compatibility, accessibility standards, and clean API consumption.",

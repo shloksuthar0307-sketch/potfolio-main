@@ -16,16 +16,18 @@ import {
 } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
+// Exactly matching repositories on https://github.com/shloksuthar0307-sketch?tab=repositories
 const projectsData = [
   {
-    id: 'repairtrace',
-    title: 'RepairTrace',
-    subtitle: 'AI-Powered Auto Repair Shop Management System',
+    id: 'garege',
+    name: 'garege',
+    title: 'garege',
+    subtitle: 'Auto Repair Shop Management System (RepairTrace)',
     category: 'Full-Stack Web App',
     featured: true,
     tags: ['React', 'Django REST', 'PostgreSQL', 'Three.js', 'WebSockets', 'Gemini AI', 'Celery'],
     problem:
-      'Auto repair shops suffer from fragmented communication between car owners, advisors, and mechanics, slow paper-based damage logging, and delayed customer repair approvals.',
+      'Auto repair shops suffer from fragmented communication between car owners, advisors, and mechanics, manual damage logging prone to human error, and delayed repair approvals.',
     keyFeatures: [
       'Gemini Vision AI damage detection analyzing vehicle photos to estimate severity & repair needs',
       'Interactive 3D vehicle inspection dashboard (React Three Fiber) with clickable damage zones',
@@ -62,8 +64,9 @@ const projectsData = [
   },
   {
     id: 'vyse',
-    title: 'Vyse',
-    subtitle: 'AI-Powered Publishing & Editorial Platform',
+    name: 'vyse',
+    title: 'vyse',
+    subtitle: 'AI-Powered Creator & Editorial Publishing Platform',
     category: 'Full-Stack Web App',
     featured: true,
     tags: ['Django', 'Python', 'PostgreSQL', 'Gemini AI', 'Tailwind CSS', 'JavaScript'],
@@ -78,7 +81,7 @@ const projectsData = [
     ],
     role: 'Full-Stack Developer',
     roleDetails:
-      'Architected the Django application from ground up, implemented the Gemini API summarization pipeline, designed the responsive dark UI, and deployed the production stack.',
+      'Architected the Django application from ground up, implemented the Gemini AI integration for story summarization, designed the responsive dark UI, and deployed the production stack.',
     demoUrl: 'https://vyse-7nj1.onrender.com',
     githubUrl: 'https://github.com/shloksuthar0307-sketch/vyse',
     caseStudy: {
@@ -91,7 +94,7 @@ const projectsData = [
         'Database: PostgreSQL managing users, stories, categories, AI metadata, and threaded comments.',
       ],
       technicalChallenges: [
-        'Reliable AI structuring: Prompt-engineered Google Gemini API calls to consistently return valid 3-bullet bulleted summaries and relevant taxonomy tags.',
+        'Reliable AI structuring: Prompt-engineered Google Gemini API calls to consistently return valid 3-bullet summaries and relevant taxonomy tags.',
         'Media handling: Built a drag-and-drop file uploader with client-side image validation and secure media serving.',
         'Reader engagement: Optimized page load speeds with efficient Django queryset caching and database index tuning.',
       ],
@@ -103,8 +106,9 @@ const projectsData = [
   },
   {
     id: 'ecom',
-    title: 'ApexStore',
-    subtitle: 'Django E-Commerce & Affiliate Marketing Engine',
+    name: 'ecom',
+    title: 'ecom',
+    subtitle: 'Django E-Commerce Store with Affiliate Referral Engine',
     category: 'Django & DRF',
     featured: true,
     tags: ['Django', 'Python', 'PostgreSQL', 'Affiliate Engine', 'JavaScript', 'Tailwind CSS'],
@@ -143,9 +147,50 @@ const projectsData = [
     },
   },
   {
+    id: 'Fuelfinders',
+    name: 'Fuelfinders',
+    title: 'Fuelfinders',
+    subtitle: 'Fuel Station Finder & Route Navigation Platform',
+    category: 'Full-Stack Web App',
+    featured: true,
+    tags: ['React', 'TypeScript', 'Vite', 'Django REST', 'Python', 'Tailwind CSS'],
+    problem:
+      'Drivers, fleet managers, and long-distance travelers need quick, reliable identification of fuel stations (Petrol, Diesel, CNG) along travel routes or within specific cities without navigating complex maps.',
+    keyFeatures: [
+      'Multi-Fuel Station Search: Filter stations by fuel availability (Petrol, Diesel, CNG) and city boundaries',
+      'Decoupled Architecture: High-speed React + Vite + TypeScript frontend consuming Django REST Framework endpoints',
+      'City & Route Filtering: Search by destination, highway corridors, or local municipality coordinates',
+      'Station Details & Amenities: View operating hours, payment methods, air pump availability, and contact details',
+      'Modular REST APIs: Clean DRF serializers and viewsets for rapid station data retrieval and updates',
+    ],
+    role: 'Full-Stack Developer',
+    roleDetails:
+      'Built the Django REST Framework backend API for stations and cities, architected the TypeScript React frontend with responsive filters, and connected the API pipelines.',
+    demoUrl: null,
+    githubUrl: 'https://github.com/shloksuthar0307-sketch/Fuelfinders',
+    caseStudy: {
+      clientOverview:
+        'Designed for logistics providers, regional commuters, and commercial drivers looking for verified fuel station listings and amenities.',
+      architecture: [
+        'Frontend: React + Vite + TypeScript with Tailwind CSS for rapid, mobile-first station search.',
+        'Backend: Django REST Framework providing serialized JSON endpoints for stations, fuel types, and cities.',
+        'Database: Relational schema modeling Stations, Cities, FuelTypes, Amenities, and AvailabilityLogs.',
+      ],
+      technicalChallenges: [
+        'Filtering efficiency: Engineered DRF filter backends allowing concurrent filtering by multiple fuel types and city regions.',
+        'Mobile responsiveness: Created lightweight, expandable station summary cards designed for quick touch interactions on mobile devices.',
+      ],
+      databaseHighlights:
+        'Normalized models for Station, FuelType, City, and StationFuelPricing with indexed location lookups.',
+      deliverables:
+        'Full-stack repository with organized backend Django API and frontend React TypeScript client, complete with setup instructions.',
+    },
+  },
+  {
     id: 'hospital',
-    title: 'CareSync',
-    subtitle: 'Hospital & Clinic Multi-Role Management System',
+    name: 'hospital',
+    title: 'hospital',
+    subtitle: 'Hospital & Multi-Department Healthcare Management System',
     category: 'Django & DRF',
     featured: false,
     tags: ['Django', 'Python', 'PostgreSQL', 'Role-Based Access', 'Dashboards'],
@@ -184,7 +229,8 @@ const projectsData = [
   },
   {
     id: 'library',
-    title: 'LibriTrack',
+    name: 'library',
+    title: 'library',
     subtitle: 'Enterprise Multi-Branch Library & Catalog System',
     category: 'Django & DRF',
     featured: false,
@@ -223,8 +269,9 @@ const projectsData = [
   },
   {
     id: 'contact',
-    title: 'ContactBook',
-    subtitle: 'Secure Contact Management with OTP Verification',
+    name: 'contact',
+    title: 'contact',
+    subtitle: 'Secure Contact Management System with OTP Verification',
     category: 'Full-Stack Web App',
     featured: false,
     tags: ['Django', 'Python', 'PostgreSQL', 'OTP Auth', 'REST APIs'],
@@ -260,16 +307,96 @@ const projectsData = [
         'Production web application with working email OTP authentication, contact CRUD, and REST API access.',
     },
   },
+  {
+    id: 'chatbot',
+    name: 'chatbot',
+    title: 'chatbot',
+    subtitle: 'Full-Stack AI Chatbot with Django REST & React',
+    category: 'Full-Stack Web App',
+    featured: false,
+    tags: ['React', 'Django REST', 'Python', 'JavaScript', 'JWT Auth'],
+    problem:
+      'Modern web applications require responsive, contextual conversation interfaces backed by structured database persistence and user account segregation.',
+    keyFeatures: [
+      'Interactive Chat UI: Dynamic React frontend with real-time message streaming layout and auto-scrolling',
+      'Django REST Backend: Decoupled API with dedicated accounts and chat modules',
+      'Session & History Storage: Conversation persistence linked to authenticated user accounts',
+      'Token Authentication: Secure JWT / token authentication for safe client-server communication',
+      'Customizable System Prompts: Extensible architecture ready to integrate LLM providers or rule engines',
+    ],
+    role: 'Full-Stack Developer',
+    roleDetails:
+      'Engineered both the backend Django REST Framework APIs (accounts, chat) and the frontend React application for dynamic messaging.',
+    demoUrl: null,
+    githubUrl: 'https://github.com/shloksuthar0307-sketch/chatbot',
+    caseStudy: {
+      clientOverview:
+        'A full-stack conversational engine designed as a plug-and-play chatbot module for web platforms and customer portals.',
+      architecture: [
+        'Frontend: React.js interface with chat bubbles, typing indicators, and user controls.',
+        'Backend: Django REST Framework with accounts serializer and chat session views.',
+        'Database: Relational tables storing users, chat threads, and message logs.',
+      ],
+      technicalChallenges: [
+        'Message serialization: Designed lightweight REST endpoints for immediate message acknowledgement and history retrieval.',
+        'State management: Built clean React hooks managing conversational state without re-rendering the entire chat log.',
+      ],
+      databaseHighlights:
+        'Normalized models for ChatSession, Message, and User with chronological ordering.',
+      deliverables:
+        'Full-stack codebase containing both Django REST backend and React frontend ready for LLM or rule-based deployment.',
+    },
+  },
+  {
+    id: 'clinic',
+    name: 'clinic',
+    title: 'clinic',
+    subtitle: 'Outpatient Clinic & Patient Records Management System',
+    category: 'Django & DRF',
+    featured: false,
+    tags: ['Django', 'Python', 'Bootstrap', 'Medical Records', 'Dashboards'],
+    problem:
+      'Independent clinics need an affordable, straightforward application to manage daily patient queues, doctor consultations, and prescriptions without enterprise complexity.',
+    keyFeatures: [
+      'Patient Registration: Rapid walk-in intake and chronological consultation histories',
+      'Doctor Dashboard: Dedicated interface for doctor notes, vital checks, and diagnosis logging',
+      'Prescription Tracking: Standardized medication logging with dosage and instructions',
+      'Appointment Scheduling: Clinic timetable management and patient queue visibility',
+      'Role Boundaries: Distinct views for clinical staff, doctors, and front-desk reception',
+    ],
+    role: 'Backend & Full-Stack Developer',
+    roleDetails:
+      'Created Django accounts and dashboard applications, engineered patient records models, and built template-driven interfaces.',
+    demoUrl: null,
+    githubUrl: 'https://github.com/shloksuthar0307-sketch/clinic',
+    caseStudy: {
+      clientOverview:
+        'Tailored for independent practitioners, outpatient dispensaries, and dental/family clinics.',
+      architecture: [
+        'Backend: Django application with dedicated accounts and dashboard modules.',
+        'Frontend: Clean, high-contrast dashboard templates built with HTML5 and Bootstrap.',
+        'Database: Relational models for Patient, Doctor, Appointment, and Prescription.',
+      ],
+      technicalChallenges: [
+        'Queue workflow: Structured intuitive status transitions (Waiting, In Consultation, Completed, Cancelled).',
+        'Fast lookup: Indexed patient search by phone number and registration ID for quick reception lookup.',
+      ],
+      databaseHighlights:
+        'Patient, Doctor, Consultation, and Prescription tables with relational integrity.',
+      deliverables:
+        'Complete Django clinic management system with role-based dashboards and medical record workflows.',
+    },
+  },
 ];
 
-const categories = ['All Projects', 'Full-Stack Web App', 'Django & DRF'];
+const categories = ['All Repositories', 'Full-Stack Web App', 'Django & DRF'];
 
 export const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Projects');
+  const [selectedCategory, setSelectedCategory] = useState('All Repositories');
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects =
-    selectedCategory === 'All Projects'
+    selectedCategory === 'All Repositories'
       ? projectsData
       : projectsData.filter((p) => p.category === selectedCategory);
 
@@ -296,17 +423,25 @@ export const Projects = () => {
           <div>
             <span className="text-primary font-mono text-sm tracking-widest uppercase flex items-center gap-3 mb-4">
               <span className="w-8 h-[1px] bg-primary"></span>
-              03. Selected Works
+              03. Verified GitHub Repositories
             </span>
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-white tracking-tight">
-              Production Projects &amp;{' '}
+              Production Works &amp;{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-cyan-400">
-                Case Studies
+                Source Code
               </span>
             </h2>
             <p className="mt-4 text-foreground/75 text-base md:text-lg max-w-2xl font-light">
-              Real applications built with React, Django REST Framework, and PostgreSQL. Every project below includes
-              verified source code, live deployments, and architectural case studies.
+              Every project below is an active public repository on{' '}
+              <a
+                href="https://github.com/shloksuthar0307-sketch?tab=repositories"
+                target="_blank"
+                rel="noreferrer"
+                className="text-cyan-400 underline hover:text-white transition-colors"
+              >
+                github.com/shloksuthar0307-sketch
+              </a>
+              . Built with React, Django REST Framework, and PostgreSQL.
             </p>
           </div>
 
@@ -337,7 +472,7 @@ export const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
               className="group relative flex flex-col justify-between rounded-3xl p-7 md:p-8 bg-white/[0.02] hover:bg-white/[0.04] border border-white/10 hover:border-primary/50 transition-all duration-300 shadow-xl overflow-hidden"
             >
               {/* Top Row: Category & Badges */}
@@ -353,10 +488,13 @@ export const Projects = () => {
                   )}
                 </div>
 
-                {/* Title & Subtitle */}
-                <h3 className="text-2xl md:text-3xl font-heading font-bold text-white group-hover:text-primary transition-colors mb-2">
-                  {project.title}
-                </h3>
+                {/* Exact GitHub Repo Name & Subtitle */}
+                <div className="flex items-center gap-2 mb-1">
+                  <FaGithub className="w-5 h-5 text-primary flex-shrink-0" />
+                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-white group-hover:text-primary transition-colors font-mono">
+                    {project.name}
+                  </h3>
+                </div>
                 <p className="text-xs font-medium text-cyan-400/90 mb-4 font-mono">
                   {project.subtitle}
                 </p>
@@ -415,25 +553,31 @@ export const Projects = () => {
                 </button>
 
                 <div className="flex items-center gap-2">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hoverable flex-1 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-medium border border-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-1.5"
-                    aria-label={`Visit live demo for ${project.title}`}
-                  >
-                    <span>Live Demo</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400" />
-                  </a>
+                  {project.demoUrl ? (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hoverable flex-1 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-medium border border-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-1.5"
+                      aria-label={`Visit live demo for ${project.title}`}
+                    >
+                      <span>Live Demo</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400" />
+                    </a>
+                  ) : null}
+
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="hoverable py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-medium border border-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-1.5"
+                    className={`hoverable ${
+                      project.demoUrl ? '' : 'w-full'
+                    } py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-medium border border-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-1.5`}
                     aria-label={`View GitHub repository for ${project.title}`}
                   >
                     <FaGithub className="w-4 h-4 text-foreground/80" />
-                    <span>Code</span>
+                    <span>{project.demoUrl ? 'Code' : 'GitHub Repository'}</span>
+                    {!project.demoUrl && <ExternalLink className="w-3 h-3 text-cyan-400 ml-1" />}
                   </a>
                 </div>
               </div>
@@ -477,8 +621,11 @@ export const Projects = () => {
                   <span className="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-foreground/70 border border-white/10">
                     Role: {selectedProject.role}
                   </span>
+                  <span className="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-cyan-400 border border-cyan-500/20">
+                    Repo: {selectedProject.name}
+                  </span>
                 </div>
-                <h2 id="case-study-title" className="text-3xl md:text-5xl font-heading font-bold text-white mb-2">
+                <h2 id="case-study-title" className="text-3xl md:text-5xl font-heading font-bold text-white mb-2 font-mono">
                   {selectedProject.title}
                 </h2>
                 <p className="text-base text-cyan-400 font-mono">
@@ -558,15 +705,17 @@ export const Projects = () => {
               {/* Modal Footer Links */}
               <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex flex-wrap gap-2 w-full sm:w-auto">
-                  <a
-                    href={selectedProject.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hoverable inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-accent text-white font-semibold text-sm transition-all shadow-lg shadow-primary/30"
-                  >
-                    <span>Visit Live Application</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                  {selectedProject.demoUrl && (
+                    <a
+                      href={selectedProject.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hoverable inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-accent text-white font-semibold text-sm transition-all shadow-lg shadow-primary/30"
+                    >
+                      <span>Visit Live Application</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
                   <a
                     href={selectedProject.githubUrl}
                     target="_blank"
@@ -574,7 +723,7 @@ export const Projects = () => {
                     className="hoverable inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium text-sm border border-white/10 hover:border-white/30 transition-all"
                   >
                     <FaGithub className="w-4 h-4" />
-                    <span>View GitHub Repo</span>
+                    <span>View GitHub Repo ({selectedProject.name})</span>
                   </a>
                 </div>
 
